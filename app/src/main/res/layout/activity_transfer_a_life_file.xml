@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".home.transferlifefile.TransferALifeFileActivity">
+
+    <include layout="@layout/default_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_largexxx_size"
+        android:gravity="center"
+        android:text="@string/transfer_a_life_file"
+        android:textColor="@color/color_app_blue"
+        android:textSize="@dimen/text_largexx_size" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:padding="@dimen/text_normal_size">
+
+        <TextView
+            android:layout_marginTop="@dimen/padding_large_size"
+            android:textColor="@color/color_app_grey"
+            android:text="@string/please_enter_email_to_send_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/emailText"
+            android:layout_marginTop="@dimen/padding_large_size"
+            style="@style/EditTextDefault"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_address_a"
+            android:singleLine="true"
+            android:textSize="@dimen/text_normal_size" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_largex_size"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:background="@drawable/button_diff_satus"
+            android:text="@string/submit"
+            android:textColor="@android:color/white"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            android:theme="@style/ProgressBarTheme"
+            android:padding="@dimen/padding_normal_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

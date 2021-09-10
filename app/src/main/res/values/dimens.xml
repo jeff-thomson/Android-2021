@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="divder">2sp</dimen>
+    <dimen name="divder_1">1sp</dimen>
+    <dimen name="lifefilecell">90dp</dimen>
+    <dimen name="player_home_height">275dp</dimen>
+    <dimen name="play_cell_height">72dp</dimen>
+    <dimen name="play_cell_width">100dp</dimen>
+</resources>

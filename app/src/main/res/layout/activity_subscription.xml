@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".profile.subscription.SubscriptionActivity">
+
+    <include layout="@layout/default_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_largexxx_size"
+        android:gravity="center"
+        android:text="@string/subscription"
+        android:textColor="@color/color_app_blue"
+        android:textSize="@dimen/text_largexx_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:padding="@dimen/text_normal_size">
+
+        <RelativeLayout
+            android:id="@+id/freeTireLl"
+            android:background="@color/color_lighter_blue"
+            android:padding="@dimen/padding_normal_size"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/freeLbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/free"
+                android:textColor="@color/color_app_blue"
+                android:textSize="@dimen/text_medium_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/freeTv"
+                android:layout_below="@id/freeLbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/free"
+                android:textColor="@color/color_app_blue"
+                android:textSize="@dimen/text_normal_size" />
+
+            <CheckBox
+                android:id="@+id/freeCb"
+                android:layout_centerVertical="@id/freeLbl"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:focusable="false"
+                android:checked="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/paidTireLl"
+            android:layout_marginTop="@dimen/padding_largex_size"
+            android:background="@color/color_lighter_blue"
+            android:padding="@dimen/padding_normal_size"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/paidLbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gb35_of_storage"
+                android:textColor="@color/color_app_blue"
+                android:textSize="@dimen/text_medium_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/paidTv"
+                android:layout_below="@id/paidLbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$.99/month"
+                android:textColor="@color/color_app_blue"
+                android:textSize="@dimen/text_normal_size" />
+
+            <CheckBox
+                android:id="@+id/paidCb"
+                android:layout_centerVertical="@id/paidLbl"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:focusable="false"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/unlimitedTireLl"
+            android:layout_marginTop="@dimen/padding_largex_size"
+            android:background="@color/color_lighter_blue"
+            android:padding="@dimen/padding_normal_size"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/unlimitedLbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/unlimitedStorage"
+                android:textColor="@color/color_app_blue"
+                android:textSize="@dimen/text_medium_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/unlimitedTv"
+                android:layout_below="@id/unlimitedLbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$1.99/month"
+                android:textColor="@color/color_app_blue"
+                android:textSize="@dimen/text_normal_size" />
+
+            <CheckBox
+                android:id="@+id/unlimitedCb"
+                android:layout_centerVertical="@id/unlimitedLbl"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:focusable="false"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_margin="@dimen/text_medium_size"
+        android:id="@+id/btnRestorePurchase"
+        android:foreground="@drawable/custom_ripple_effect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:background="@drawable/button_diff_satus"
+        android:text="@string/restore_purchage"
+        android:textColor="@android:color/white" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:theme="@style/ProgressBarTheme"
+        android:padding="@dimen/padding_normal_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_lighter_blue"
+    android:orientation="vertical"
+    tools:context=".profile.contactus.ContactUsActivity">
+
+    <include layout="@layout/default_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_largexxx_size"
+            android:gravity="center"
+            android:text="@string/contact_us"
+            android:textColor="@color/color_app_blue"
+            android:textSize="@dimen/text_largexx_size" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/text_normal_size">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_normal_size"
+                android:paddingRight="@dimen/padding_normal_size">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_large_size"
+                    android:text="@string/mail"
+                    android:textColor="@color/color_app_blue"
+                    android:textSize="@dimen/text_medium_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Stych Inc. \n14 West Main St. \nMorristown, NJ 07960"
+                        android:textColor="@color/color_app_blue"
+                        android:textSize="@dimen/text_normal_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divder_1"
+                    android:layout_marginTop="@dimen/padding_largexx_size"
+                    android:layout_marginBottom="@dimen/padding_largexx_size"
+                    android:background="@color/color_app_grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_normal_size"
+                android:paddingRight="@dimen/padding_normal_size">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone"
+                    android:textColor="@color/color_app_blue"
+                    android:textSize="@dimen/text_medium_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="(800) 565-1520"
+                        android:textColor="@color/color_app_blue"
+                        android:textSize="@dimen/text_normal_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divder_1"
+                    android:layout_marginTop="@dimen/padding_largexx_size"
+                    android:layout_marginBottom="@dimen/padding_largexx_size"
+                    android:background="@color/color_app_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_normal_size"
+                android:paddingRight="@dimen/padding_normal_size">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/customer_support"
+                    android:textColor="@color/color_app_blue"
+                    android:textSize="@dimen/text_medium_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/prodileEmailTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="custservice@stych.app"
+                        android:textColor="@color/color_app_blue"
+                        android:textSize="@dimen/text_normal_size" />
+
+                    <ImageView
+                        android:id="@+id/unlimitedIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divder_1"
+                    android:layout_marginTop="@dimen/padding_largexx_size"
+                    android:layout_marginBottom="@dimen/padding_largexx_size"
+                    android:background="@color/color_app_grey" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

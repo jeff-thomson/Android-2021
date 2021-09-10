@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <group android:id="@+id/life_files" android:checkableBehavior="single">
+    </group>
+
+    <group android:id="@+id/actions">
+        <item
+            android:id="@+id/action_manage_life_file"
+            android:orderInCategory="1000"
+            android:title="@string/manange_my_life_files" />
+        <item
+            android:id="@+id/action_create_new_life_file"
+            android:orderInCategory="1001"
+            android:title="@string/create_a_new_life_file" />
+        <item
+            android:id="@+id/action_rename_life_file"
+            android:orderInCategory="1002"
+            android:title="@string/rename_life_file" />
+    </group>
+
+    <item
+        android:id="@+id/action_user"
+        android:title="Stych"
+        app:showAsAction="always" />
+</menu>

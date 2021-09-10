@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_splash_wecome"
+    android:orientation="vertical"
+    tools:context=".start.splash.SplashActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_large_size">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsParentLl"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:padding="@dimen/padding_largexxx_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:background="@drawable/button_red"
+            android:padding="@dimen/padding_large_size"
+            android:text="@string/sign_up"
+            android:textColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal_size"
+            android:textAllCaps="false"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:background="@drawable/white_border"
+            android:padding="@dimen/padding_large_size"
+            android:text="@string/sign_in"
+            android:textColor="@android:color/white"
+             />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/play_cell_height"
+    android:layout_margin="@dimen/padding_tiny"
+    android:background="#ee000000"
+    android:foreground="@drawable/custom_ripple_effect">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/moreIv"
+        android:layout_width="@dimen/padding_largexxx_size"
+        android:layout_height="@dimen/padding_largexxx_size"
+        android:layout_alignParentRight="true"
+        android:foreground="@drawable/custom_ripple_effect"
+        android:padding="@dimen/padding_normal_size"
+        android:src="@drawable/ic_baseline_more_vert_24" />
+</RelativeLayout>

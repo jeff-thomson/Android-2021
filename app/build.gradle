@@ -1,0 +1,112 @@
+plugins {
+    id 'com.android.application'
+}
+
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyMMdd')
+    return formattedDate
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.stych.android"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 9
+        versionName "1.0." + getDate()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('/Users/ram/Documents/KeyStore/releaseKeyStore')
+            keyAlias 'ramanand'
+            keyPassword 'androiddev2009'
+            storePassword 'androiddev2009'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            buildConfigField "String", 'BASE_URL', "\"https://stythapi.com\""
+            buildConfigField "String", 'S3_BUCKET', "\"stych\""
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+            buildConfigField "String", 'BASE_URL', "\"https://dev.stythapi.com\""
+            buildConfigField "String", 'S3_BUCKET', "\"stych-development\""
+        }
+    }
+    compileOptions {
+        // Support for Java 8 features
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+   externalNativeBuild {
+        cmake {
+            path file('../../Bento4/CMakeLists.txt')
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // dependency for exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.13.3'
+
+    //JSON parsing and networking
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation("com.squareup.okhttp3:logging-interceptor:3.9.0")
+
+    //Dagger dependency injection
+    /* Dagger2 - We are going to use dagger.android which includes
+     * support for Activity and fragment injection so we need to include
+     * the following dependencies */
+    implementation 'com.google.dagger:dagger-android:2.27'
+    implementation 'com.google.dagger:dagger-android-support:2.27'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.27'
+    /* Dagger2 - default dependency */
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.27'
+    implementation 'com.karumi:dexter:6.2.2'
+
+    //image loading library
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+
+    // Amplify core dependency
+    implementation 'com.amplifyframework:core:1.17.1'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    implementation 'com.amplifyframework:aws-storage-s3:1.17.1'
+    implementation 'com.amplifyframework:aws-auth-cognito:1.17.1'
+
+    //Play store billing library
+    def billing_version = "3.0.0"
+    implementation "com.android.billingclient:billing:$billing_version"
+
+
+    implementation 'com.anjlab.android.iab.v3:library:1.0.44'
+}

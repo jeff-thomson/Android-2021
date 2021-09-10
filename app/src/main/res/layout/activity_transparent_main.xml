@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88000000"
+    tools:context=".home.transparent.TransparentMainActivity">
+
+    <TextView
+        android:id="@+id/import_hint_tv"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_red"
+        android:padding="@dimen/padding_normal_size"
+        android:text="@string/tap_to_camre_icon_to_reocrd"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/import_hint_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/import_hint_iv"
+        android:layout_width="23dp"
+        android:layout_height="46dp"
+        android:src="@mipmap/ic_popup1"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="@dimen/padding_largexx_size"
+        app:layout_constraintStart_toStartOf="@id/import_hint_tv"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/camera_hint_tv"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_red"
+        android:padding="@dimen/padding_normal_size"
+        android:text="@string/import_copies_of_your_favorate"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_popup2"
+        app:layout_constraintBottom_toTopOf="@+id/create_hint_tv"
+        app:layout_constraintEnd_toEndOf="@+id/create_hint_tv"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="@+id/create_hint_tv" />
+
+    <TextView
+        android:id="@+id/create_hint_tv"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/button_red"
+        android:padding="@dimen/padding_normal_size"
+        android:text="@string/create_transfer_switch_or_delete_life_file"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

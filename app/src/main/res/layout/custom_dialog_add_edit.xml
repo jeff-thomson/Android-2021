@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_largexx_size">
+    <TextView
+        android:id="@+id/messageTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter your Message"
+        android:gravity="left"
+        android:textSize="@dimen/text_large_size"
+       />
+    <EditText
+        android:id="@+id/txt_input"
+        style="@style/EditTextDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_largexx_size"
+        android:layout_marginBottom="@dimen/padding_largexx_size"
+        android:hint="@string/name"
+        android:textSize="@dimen/text_normal_size" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_normal_size">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginRight="@dimen/padding_normal_size"
+            android:background="@drawable/button_red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:layout_weight="1"
+            android:id="@+id/btn_cancel"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/button_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:text="Okay"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/btn_okay"/>
+    </LinearLayout>
+</LinearLayout>

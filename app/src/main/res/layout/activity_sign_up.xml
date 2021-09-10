@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".start.signup.SignUpActivity">
+
+
+    <include layout="@layout/default_header"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_largexxx_size"
+        android:gravity="center"
+        android:text="@string/sign_up"
+        android:textColor="@color/color_app_blue"
+        android:textSize="@dimen/text_largexx_size" />
+
+
+    <LinearLayout
+        android:padding="@dimen/text_normal_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/emailText"
+            style="@style/EditTextDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textSize="@dimen/text_normal_size" />
+
+        <TextView
+            android:layout_marginTop="@dimen/padding_largex_size"
+            android:textColor="@color/color_app_blue"
+            android:textSize="@dimen/text_normal_size"
+            android:text="@string/choose_a_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="@string/password_des"
+            android:textColor="@color/color_app_grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/passwordText"
+            style="@style/EditTextDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/text_normal_size" />
+
+        <EditText
+            android:id="@+id/confirmPasswordText"
+            style="@style/EditTextDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/text_normal_size" />
+
+        <TextView
+            android:id="@+id/temsTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/padding_largex_size"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/terms"
+            android:textColor="@color/color_app_blue"
+            android:textSize="@dimen/text_normal_size" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_largex_size"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:background="@drawable/button_diff_satus"
+            android:text="@string/sign_up"
+            android:textColor="@android:color/white" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            android:theme="@style/ProgressBarTheme"
+            android:padding="@dimen/padding_normal_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

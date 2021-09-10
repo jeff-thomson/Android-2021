@@ -1,0 +1,28 @@
+{
+    "storage": {
+        "plugins": {
+            "awsS3StoragePlugin": {
+                "bucket": "stych",
+                "region": "us-east-1"
+            }
+        }
+    },
+
+    "auth": {
+        "plugins": {
+            "awsCognitoAuthPlugin": {
+                "IdentityManager": {
+                    "Default": {}
+                },
+                "CredentialsProvider": {
+                    "CognitoIdentity": {
+                        "Default": {
+                            "PoolId": "us-east-1:9960dfef-02ee-4edf-af07-ddd6d548cb2f",
+                            "Region": "us-east-1"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
